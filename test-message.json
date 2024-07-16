@@ -1,0 +1,27 @@
+{
+  "transactionId": "12345",
+  "userId": "user01",
+  "amount": 250.75,
+  "currency": "USD",
+  "status": "AUTHORIZED",
+  "timestamp": "2024-07-10T12:00:00Z",
+  "merchantId": "merchant01",
+  "paymentMethod": {
+    "type": "CreditCard",
+    "cardNumber": "4111111111111111",
+    "expiryDate": "12/25",
+    "cvv": "123"
+  },
+  "billingAddress": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "zipCode": "12345"
+  },
+  "shippingAddress": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "zipCode": "12345"
+  }
+}

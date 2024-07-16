@@ -1,0 +1,24 @@
+Start Zookeeper:
+zkServer.cmd
+
+Start Kafka:
+kafka-server-start.bat ..\..\config\server.properties
+
+Create a Topic:
+kafka-topics.bat --create --topic billingTopic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+Send message to topic
+kafka-console-producer.bat --broker-list localhost:9092 --topic billingTopic  D:\Programming World\Kafka client and cluster\test-message.json
+
+
+List Topics:
+kafka-topics.bat --list --bootstrap-server localhost:9092
+
+Start a Producer:
+kafka-console-producer.bat --topic test-topic --bootstrap-server localhost:9092
+
+Start a Consumer:
+kafka-console-consumer.bat --topic billingTopic --bootstrap-server localhost:9092 --from-beginning
+
+
+mvn spring-boot:run -Dspring-boot.run.arguments=--spring.kafka.bootstrap-servers=localhost:9092
